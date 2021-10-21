@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Splash Screen',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-      ),
+      theme: ThemeData(),
       home: MyHomePage(
         title: 'Dashboard',
       ),
@@ -54,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff356859),
+      color: Color(0xfff0f4ff),
       child: Image.asset('assets/images/gruhininobg.png'),
     );
   }
@@ -78,7 +76,7 @@ class SecondScreen extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.deepOrange,
+                color: Colors.cyan,
               ),
               child: Text('Hello, Friend!'),
             ),
