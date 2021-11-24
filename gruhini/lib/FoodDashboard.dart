@@ -1,49 +1,16 @@
 // @dart=2.9
-
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/rendering/flex.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'AboutApp.dart';
-import 'VaccinationDashboard.dart';
 import 'package:gruhini/FoodDashboard.dart';
+import 'ComingSoonScreen.dart';
 
-void main() => runApp(MaterialApp(home: MyHomePage()));
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  void initState() {
-    super.initState();
-    Timer(
-        Duration(seconds: 3),
-            () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SecondScreen())));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Color(0xfff0f4ff),
-      child: Image.asset('assets/images/gruhininobg.png'),
-    );
-  }
-}
-
-class SecondScreen extends StatelessWidget {
+class FoodDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff8f9fa),
       appBar: AppBar(
-        title: Text("Gruhini App"),
+        title: Text("second screen"),
         backgroundColor: Color(0xff42a5f5),
       ),
 
@@ -69,7 +36,7 @@ class SecondScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("Dashboard",
+                    Text("Food Dashboard",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 16,
@@ -100,7 +67,7 @@ class SecondScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => VaccinationDashboard()),
+                  MaterialPageRoute(builder: (context) => CommingSoonScreen()),
                 );
               },
               child: Column(
@@ -111,7 +78,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Image.asset(
-                    "assets/images/health.png",
+                    "assets/images/shopping_list.png",
                     width: 80,
                     height: 70,
                   ),
@@ -121,7 +88,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "Health",
+                    "Shopping List",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -135,7 +102,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "Health",
+                    "shopping list",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -167,7 +134,7 @@ class SecondScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FoodDashboard()),
+                  MaterialPageRoute(builder: (context) => CommingSoonScreen()),
                 );
               },
               child: Column(
@@ -178,7 +145,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Image.asset(
-                    "assets/images/food.png",
+                    "assets/images/grocery.png",
                     width: 80,
                     height: 70,
                   ),
@@ -188,7 +155,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "Food",
+                    "Grocery",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -202,7 +169,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "Food",
+                    "grocery",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -233,7 +200,7 @@ class SecondScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AboutApp()),
+                  MaterialPageRoute(builder: (context) => CommingSoonScreen()),
                 );
               },
               child: Column(
@@ -244,7 +211,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Image.asset(
-                    "assets/images/about.png",
+                    "assets/images/menu.png",
                     width: 80,
                     height: 70,
                   ),
@@ -254,7 +221,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "About app",
+                    "Menu",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -268,7 +235,7 @@ class SecondScreen extends StatelessWidget {
                   ),
 
                   Text(
-                    "About app",
+                    "Menu",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                           color: Color(0xff023e8a),
@@ -337,5 +304,7 @@ class SecondScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
