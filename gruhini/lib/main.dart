@@ -94,7 +94,7 @@ class SecondScreen extends StatelessWidget {
 
           Container(
             decoration: BoxDecoration(
-                color: Color(0xff90caf9),
+                color: Color(0xfff0f4ff),
                 borderRadius: BorderRadius.circular(10)),
             child: ElevatedButton(
               onPressed: () {
@@ -161,7 +161,7 @@ class SecondScreen extends StatelessWidget {
 
           Container(
             decoration: BoxDecoration(
-                color: Color(0xff90caf9),
+                color: Color(0xfff0f4ff),
                 borderRadius: BorderRadius.circular(10)),
             child: ElevatedButton(
               onPressed: () {
@@ -227,7 +227,7 @@ class SecondScreen extends StatelessWidget {
 
           Container(
             decoration: BoxDecoration(
-                color: Color(0xff90caf9),
+                color: Color(0xfff0f4ff),
                 borderRadius: BorderRadius.circular(10)),
             child: ElevatedButton(
               onPressed: () {
