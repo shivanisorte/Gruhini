@@ -6,7 +6,6 @@ import 'package:flutter/src/rendering/flex.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'AboutApp.dart';
 import 'VaccinationDashboard.dart';
-import 'package:gruhini/FoodDashboard.dart';
 
 void main() => runApp(MaterialApp(home: MyHomePage()));
 
@@ -24,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(
         Duration(seconds: 3),
-            () => Navigator.pushReplacement(
+        () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SecondScreen())));
   }
 
@@ -46,7 +45,6 @@ class SecondScreen extends StatelessWidget {
         title: Text("Gruhini App"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -100,7 +98,8 @@ class SecondScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => VaccinationDashboard()),
+                  MaterialPageRoute(
+                      builder: (context) => VaccinationDashboard()),
                 );
               },
               child: Column(
@@ -109,117 +108,44 @@ class SecondScreen extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
-
                   Image.asset(
                     "assets/images/health.png",
                     width: 80,
                     height: 70,
                   ),
-
                   SizedBox(
                     height: 4,
                   ),
-
                   Text(
                     "Health",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        )),
+                      color: Color(0xff023e8a),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    )),
                   ),
-
                   SizedBox(
                     height: 5,
                   ),
-
                   Text(
                     "Health",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        )),
+                      color: Color(0xff023e8a),
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    )),
                   ),
-
                   SizedBox(
                     height: 2,
                   ),
-
                 ],
               ),
             ),
             width: 350,
             height: 180,
           ), //container1
-
-          SizedBox(
-            height: 25,
-          ),
-
-          Container(
-            decoration: BoxDecoration(
-                color: Color(0xfff0f4ff),
-                borderRadius: BorderRadius.circular(10)),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FoodDashboard()),
-                );
-              },
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    height: 2,
-                  ),
-
-                  Image.asset(
-                    "assets/images/food.png",
-                    width: 80,
-                    height: 70,
-                  ),
-
-                  SizedBox(
-                    height: 4,
-                  ),
-
-                  Text(
-                    "Food",
-                    style: GoogleFonts.openSans(
-                        textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        )),
-                  ),
-
-                  SizedBox(
-                    height: 5,
-                  ),
-
-                  Text(
-                    "Food",
-                    style: GoogleFonts.openSans(
-                        textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        )),
-                  ),
-
-                  SizedBox(
-                    height: 2,
-                  ),
-                ],
-              ),
-            ),
-            width: 350,
-            height: 180,
-          ), // container2
 
           SizedBox(
             height: 25,
@@ -242,45 +168,38 @@ class SecondScreen extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
-
                   Image.asset(
                     "assets/images/about.png",
                     width: 80,
                     height: 70,
                   ),
-
                   SizedBox(
                     height: 4,
                   ),
-
                   Text(
                     "About app",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        )),
+                      color: Color(0xff023e8a),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    )),
                   ),
-
                   SizedBox(
                     height: 5,
                   ),
-
                   Text(
                     "About app",
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                          color: Color(0xff023e8a),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        )),
+                      color: Color(0xff023e8a),
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    )),
                   ),
-
                   SizedBox(
                     height: 2,
                   ),
-
                 ],
               ),
             ),
@@ -289,7 +208,6 @@ class SecondScreen extends StatelessWidget {
           ), //container3
         ],
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -337,5 +255,3 @@ class SecondScreen extends StatelessWidget {
     );
   }
 }
-
-

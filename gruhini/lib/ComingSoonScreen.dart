@@ -1,7 +1,6 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gruhini/FoodDashboard.dart';
 
 class CommingSoonScreen extends StatelessWidget {
   @override
@@ -12,7 +11,6 @@ class CommingSoonScreen extends StatelessWidget {
         title: Text("second screen"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -63,30 +61,21 @@ class CommingSoonScreen extends StatelessWidget {
                 color: Color(0xff90caf9),
                 borderRadius: BorderRadius.circular(10)),
             child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FoodDashboard()),
-                );
-              },
+              onPressed: () {},
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
                     height: 2,
                   ),
-
                   Image.asset(
                     "assets/images/coming_soon.png",
                     width: 120,
                     height: 100,
                   ),
-
                   SizedBox(
                     height: 4,
                   ),
-
-
                 ],
               ),
             ),
@@ -97,7 +86,6 @@ class CommingSoonScreen extends StatelessWidget {
           //container3
         ],
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -145,7 +133,3 @@ class CommingSoonScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
