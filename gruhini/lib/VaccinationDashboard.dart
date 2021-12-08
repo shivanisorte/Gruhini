@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gruhini/health_vitals_list.dart';
 
 import 'ComingSoonScreen.dart';
 
@@ -10,9 +11,10 @@ class VaccinationDashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xfff8f9fa),
       appBar: AppBar(
-        title: Text("second screen"),
+        title: Text("HoMed"),
         backgroundColor: Color(0xff42a5f5),
       ),
+
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -27,7 +29,7 @@ class VaccinationDashboard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("WELCOME TO GRUHINI APP",
+                    Text("WELCOME TO HoMed APP",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 20,
@@ -66,7 +68,7 @@ class VaccinationDashboard extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CommingSoonScreen()),
+                  MaterialPageRoute(builder: (context) => Health_vitals_list()),
                 );
               },
               child: Column(
@@ -75,14 +77,17 @@ class VaccinationDashboard extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
+
                   Image.asset(
                     "assets/images/healthvital.png",
                     width: 80,
                     height: 70,
                   ),
+
                   SizedBox(
                     height: 4,
                   ),
+
                   Text(
                     "Health Vitals",
                     style: GoogleFonts.openSans(
@@ -92,18 +97,23 @@ class VaccinationDashboard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
+
                   SizedBox(
                     height: 5,
                   ),
+
                   Text(
-                    "health vitals",
+                    "Check your health status and get recommendations",
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                       color: Color(0xff023e8a),
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
+
                     )),
                   ),
+
                   SizedBox(
                     height: 2,
                   ),
@@ -132,17 +142,21 @@ class VaccinationDashboard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+
                   SizedBox(
                     height: 2,
                   ),
+
                   Image.asset(
                     "assets/images/ongoing_medication.png",
                     width: 80,
                     height: 70,
                   ),
+
                   SizedBox(
                     height: 4,
                   ),
+
                   Text(
                     "Ongoing Medication",
                     style: GoogleFonts.openSans(
@@ -152,11 +166,14 @@ class VaccinationDashboard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
+
                   SizedBox(
                     height: 5,
                   ),
+
                   Text(
-                    "Ongoing Medications",
+                    "Get timely reminders of your medicines",
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                       color: Color(0xff023e8a),
@@ -164,6 +181,7 @@ class VaccinationDashboard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
+
                   SizedBox(
                     height: 2,
                   ),
@@ -192,17 +210,21 @@ class VaccinationDashboard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+
                   SizedBox(
                     height: 2,
                   ),
+
                   Image.asset(
                     "assets/images/vaccination.png",
                     width: 80,
                     height: 70,
                   ),
+
                   SizedBox(
                     height: 4,
                   ),
+
                   Text(
                     "Vaccination",
                     style: GoogleFonts.openSans(
@@ -212,11 +234,14 @@ class VaccinationDashboard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
+
                   SizedBox(
                     height: 5,
                   ),
+
                   Text(
-                    "vaccination",
+                    "Get vaccination details and schedule your next appointment",
+                    textAlign: TextAlign.center,
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
                       color: Color(0xff023e8a),
@@ -235,6 +260,7 @@ class VaccinationDashboard extends StatelessWidget {
           ), //container3
         ],
       ),
+
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
