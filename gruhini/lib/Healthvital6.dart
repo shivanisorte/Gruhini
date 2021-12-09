@@ -2,23 +2,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital60 extends StatefulWidget{
-  Healthvital600 createState()=> Healthvital600();
+class Healthvital60 extends StatefulWidget {
+  Healthvital600 createState() => Healthvital600();
 }
 
 class Healthvital600 extends State<Healthvital60> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
-        title: Text("Healthyfier"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -34,7 +30,7 @@ class Healthvital600 extends State<Healthvital60> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthyfier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -69,10 +65,10 @@ class Healthvital600 extends State<Healthvital60> {
               "Cholesterol",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -80,37 +76,36 @@ class Healthvital600 extends State<Healthvital60> {
             ),
 
             Container(
-                child: Text("Cholesterol is a fat-like, waxy substance that helps your body make cell membranes, many hormones, and vitamin D. The cholesterol in your blood comes from two sources: the foods you eat and your liver. Your liver makes all the cholesterol your body needs ",
+                child: Text(
+                  "Cholesterol is a fat-like, waxy substance that helps your body make cell membranes, many hormones, and vitamin D. The cholesterol in your blood comes from two sources: the foods you eat and your liver. Your liver makes all the cholesterol your body needs ",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             Container(
-                child: Text( '''Normal Cholesterol Range - Cholesterol levels vary by age, weight, and gender. A normal range for total cholesterol is usually between 125 to 200mg/dL''',
+                child: Text(
+                  '''Normal Cholesterol Range - Cholesterol levels vary by age, weight, and gender. A normal range for total cholesterol is usually between 125 to 200mg/dL''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
             ),
 
             Container(
-                child: Text('''If Cholesterol is High - 
+                child: Text(
+                  '''If Cholesterol is High - 
 
 1. Eat heart-healthy foods 
 
@@ -169,21 +164,17 @@ If lifestyle changes aren't enough …
 Sometimes healthy lifestyle changes aren't enough to lower cholesterol levels. If your doctor recommends medication to help lower your cholesterol, take it as prescribed while continuing your lifestyle changes. Lifestyle changes can help you keep your medication dose low.''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -237,4 +228,3 @@ Sometimes healthy lifestyle changes aren't enough to lower cholesterol levels. I
     throw UnimplementedError();
   }
 }
-

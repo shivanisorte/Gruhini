@@ -2,45 +2,42 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital30 extends StatefulWidget{
-  Healthvital300 createState()=> Healthvital300();
+class Healthvital30 extends StatefulWidget {
+  Healthvital300 createState() => Healthvital300();
 }
 
 class Healthvital300 extends State<Healthvital30> {
-
   final _controller = TextEditingController();
   String textValue = "";
 
   String checkSugarStatus(String vitalsState) {
-
     // Strings for values
     String underValue = "You are in the normal sugar range";
-    String normalValue = "You are pre diebetic";
-    String overValue = "You are diebetic ";
+    String normalValue = "You are pre-diabetic";
+    String overValue = "You are diabetic ";
 
     try {
       int vitalsStateNum = int.parse(vitalsState);
 
-      if (vitalsStateNum < 140) return underValue;
-      else if (140 < vitalsStateNum && vitalsStateNum < 199) return normalValue;
-      else return overValue;
+      if (vitalsStateNum < 140)
+        return underValue;
+      else if (140 < vitalsStateNum && vitalsStateNum < 199)
+        return normalValue;
+      else
+        return overValue;
     } catch (exception) {
       return "An exception was returned";
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
-        title: Text("Healthyfier"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -56,7 +53,7 @@ class Healthvital300 extends State<Healthvital30> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthyfier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -91,10 +88,10 @@ class Healthvital300 extends State<Healthvital30> {
               "Platelets",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -102,38 +99,36 @@ class Healthvital300 extends State<Healthvital30> {
             ),
 
             Container(
-                child: Text("Platelets control bleeding in our bodies, so they can be essential to surviving surgeries such as organ transplant, as well as fighting cancer, chronic diseases, and traumatic injuries. ",
+                child: Text(
+                  "Platelets control bleeding in our bodies, so they can be essential to surviving surgeries such as organ transplant, as well as fighting cancer, chronic diseases, and traumatic injuries. ",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             Container(
-                child: Text("Normal Platelets Count - A normal platelet count ranges from 150,000 to 450,000 platelets per microliter of blood.",
+                child: Text(
+                  "Normal Platelets Count - A normal platelet count ranges from 150,000 to 450,000 platelets per microliter of blood.",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
             ),
 
             Container(
-
-                child: Text('''If Platelets Count is Low  - 
+                child: Text(
+                  '''If Platelets Count is Low  - 
 
 These tips can help you understand how to raise your blood platelet count with foods and supplements. 
 
@@ -170,20 +165,17 @@ Chlorophyll may count as one of the supplements that increase blood platelet cou
 If you have a low platelet count, it means your blood doesn’t clot as well as it should. Vitamin E and fish oil supplements can make that problem worse. Compounds in these supplements actually decrease the ability of blood to clot, so you should avoid them if you’re trying to increase your platelet count. These supplements won’t cause your platelet count to go lower, but vitamin E and fish oil capsules can disrupt other aspects of the blood clotting process and make you even more prone to bleeding.''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-            )
+                margin: EdgeInsets.all(20.0))
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -237,4 +229,3 @@ If you have a low platelet count, it means your blood doesn’t clot as well as 
     throw UnimplementedError();
   }
 }
-
