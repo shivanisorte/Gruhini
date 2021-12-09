@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gruhini/Healthvital1.dart';
 import 'ComingSoonScreen.dart';
 
 class Health_vitals_list extends StatelessWidget {
@@ -70,14 +71,14 @@ class Health_vitals_list extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CommingSoonScreen()),
+                        builder: (context) => Healthvital10()),
                   );
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Blood Sugar",
+                      "Hemoglobin",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                             color: Color(0xffcaf0f8),
@@ -112,7 +113,7 @@ class Health_vitals_list extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Hemoglobin",
+                      "Blood Sugar",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                             color: Color(0xffcaf0f8),
