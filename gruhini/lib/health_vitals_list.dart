@@ -2,8 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gruhini/HealthVital2.dart';
+import 'package:gruhini/HealthVital4.dart';
 import 'package:gruhini/Healthvital1.dart';
 import 'package:gruhini/Healthvital3.dart';
+import 'package:gruhini/Healthvital5.dart';
+import 'package:gruhini/Healthvital6.dart';
 import 'ComingSoonScreen.dart';
 
 class Health_vitals_list extends StatelessWidget {
@@ -134,7 +137,7 @@ class Health_vitals_list extends StatelessWidget {
               height: 20,
             ), // Sizedbox2
 
-            Container(
+            Container (
               decoration: BoxDecoration(
                   color: Color(0xff90caf9),
                   borderRadius: BorderRadius.circular(10)),
@@ -178,7 +181,7 @@ class Health_vitals_list extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CommingSoonScreen()),
+                        builder: (context) => Healthvital40()),
                   );
                 },
                 child: Column(
@@ -213,7 +216,7 @@ class Health_vitals_list extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CommingSoonScreen()),
+                        builder: (context) => Healthvital50()),
                   );
                 },
                 child: Column(
@@ -237,7 +240,42 @@ class Health_vitals_list extends StatelessWidget {
 
             SizedBox(
               height: 20,
-            ), // Sizedbox5
+            ),
+
+            Container(
+              decoration: BoxDecoration(
+                  color: Color(0xff90caf9),
+                  borderRadius: BorderRadius.circular(10)),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Healthvital60()),
+                  );
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "Cholestrol",
+                      style: GoogleFonts.openSans(
+                          textStyle: TextStyle(
+                            color: Color(0xffcaf0f8),
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+              width: 350,
+              height: 120,
+            ), // Container6
+
+            SizedBox(
+              height: 20,
+            ),// Sizedbox6
           ],
         ),
       ),
