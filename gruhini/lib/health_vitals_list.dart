@@ -13,14 +13,11 @@ class Health_vitals_list extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
-        title: Text("Healthyfier"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -36,7 +33,7 @@ class Health_vitals_list extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthyfier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -75,8 +72,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital10()),
+                    MaterialPageRoute(builder: (context) => Healthvital10()),
                   );
                 },
                 child: Column(
@@ -86,10 +82,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Hemoglobin",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -110,8 +106,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital20()),
+                    MaterialPageRoute(builder: (context) => Healthvital20()),
                   );
                 },
                 child: Column(
@@ -121,10 +116,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Blood Sugar",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -137,7 +132,7 @@ class Health_vitals_list extends StatelessWidget {
               height: 20,
             ), // Sizedbox2
 
-            Container (
+            Container(
               decoration: BoxDecoration(
                   color: Color(0xff90caf9),
                   borderRadius: BorderRadius.circular(10)),
@@ -145,8 +140,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital30()),
+                    MaterialPageRoute(builder: (context) => Healthvital30()),
                   );
                 },
                 child: Column(
@@ -156,10 +150,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Platelets",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -180,8 +174,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital40()),
+                    MaterialPageRoute(builder: (context) => Healthvital40()),
                   );
                 },
                 child: Column(
@@ -191,10 +184,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Blood Pressure",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -215,8 +208,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital50()),
+                    MaterialPageRoute(builder: (context) => Healthvital50()),
                   );
                 },
                 child: Column(
@@ -226,10 +218,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Thyroid",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -250,8 +242,7 @@ class Health_vitals_list extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => Healthvital60()),
+                    MaterialPageRoute(builder: (context) => Healthvital60()),
                   );
                 },
                 child: Column(
@@ -261,10 +252,10 @@ class Health_vitals_list extends StatelessWidget {
                       "Cholestrol",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
-                            color: Color(0xffcaf0f8),
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          )),
+                        color: Color(0xffcaf0f8),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )),
                     ),
                   ],
                 ),
@@ -275,11 +266,10 @@ class Health_vitals_list extends StatelessWidget {
 
             SizedBox(
               height: 20,
-            ),// Sizedbox6
+            ), // Sizedbox6
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -327,4 +317,3 @@ class Health_vitals_list extends StatelessWidget {
     );
   }
 }
-

@@ -2,17 +2,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital40 extends StatefulWidget{
-  Healthvital400 createState()=> Healthvital400();
+class Healthvital40 extends StatefulWidget {
+  Healthvital400 createState() => Healthvital400();
 }
 
 class Healthvital400 extends State<Healthvital40> {
-
   final _controller = TextEditingController();
   String textValue = "";
 
   String checkbloodpressureStatus(String vitalsState) {
-
     // Strings for values
     String underValue = "You are in the normal sugar range";
     String normalValue = "You are pre diebetic";
@@ -21,26 +19,25 @@ class Healthvital400 extends State<Healthvital40> {
     try {
       int vitalsStateNum = int.parse(vitalsState);
 
-      if (vitalsStateNum < 140) return underValue;
-      else if (140 < vitalsStateNum && vitalsStateNum < 199) return normalValue;
-      else return overValue;
+      if (vitalsStateNum < 140)
+        return underValue;
+      else if (140 < vitalsStateNum && vitalsStateNum < 199)
+        return normalValue;
+      else
+        return overValue;
     } catch (exception) {
       return "An exception was returned";
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
-        title: Text("Healthyfier"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -56,7 +53,7 @@ class Healthvital400 extends State<Healthvital40> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthyfier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -91,10 +88,10 @@ class Healthvital400 extends State<Healthvital40> {
               "Blood Pressure",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -102,17 +99,16 @@ class Healthvital400 extends State<Healthvital40> {
             ),
 
             Container(
-                child: Text("Blood pressure is the force of your blood pushing against the walls of your arteries. Each time your heart beats, it pumps blood into the arteries. Your blood pressure is highest when your heart beats, pumping the blood. This is called systolic pressure(SBP). When your heart is at rest, between beats, your blood pressure falls. This is called diastolic pressure(DBP). ",
+                child: Text(
+                  "Blood pressure is the force of your blood pushing against the walls of your arteries. Each time your heart beats, it pumps blood into the arteries. Your blood pressure is highest when your heart beats, pumping the blood. This is called systolic pressure(SBP). When your heart is at rest, between beats, your blood pressure falls. This is called diastolic pressure(DBP). ",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
@@ -124,13 +120,10 @@ class Healthvital400 extends State<Healthvital40> {
                   border: OutlineInputBorder(),
                   hintText: 'Enter the blood pressure value',
                 ),
-
                 controller: _controller,
-
                 keyboardType: TextInputType.number,
               ),
               padding: EdgeInsets.all(20),
-
             ),
 
             ElevatedButton(
@@ -146,10 +139,10 @@ class Healthvital400 extends State<Healthvital40> {
                 "submit",
                 style: GoogleFonts.openSans(
                     textStyle: TextStyle(
-                      color: Color(0xff023e8a),
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    )),
+                  color: Color(0xff023e8a),
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                )),
               ),
             ),
 
@@ -162,10 +155,10 @@ class Healthvital400 extends State<Healthvital40> {
               textAlign: TextAlign.center,
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff023e8a),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff023e8a),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -173,8 +166,8 @@ class Healthvital400 extends State<Healthvital40> {
             ),
 
             Container(
-
-                child: Text('''If Blood Pressure Is Low - 
+                child: Text(
+                  '''If Blood Pressure Is Low - 
 
 Low blood pressure that either doesn't cause signs or symptoms or causes only mild symptoms rarely requires treatment. 
 
@@ -304,20 +297,17 @@ If you find you need support beyond your family and friends, consider joining a 
 ''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-            )
+                margin: EdgeInsets.all(20.0))
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -371,4 +361,3 @@ If you find you need support beyond your family and friends, consider joining a 
     throw UnimplementedError();
   }
 }
-

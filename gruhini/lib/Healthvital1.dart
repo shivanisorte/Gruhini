@@ -2,45 +2,43 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital10 extends StatefulWidget{
-  Healthvital100 createState()=> Healthvital100();
+class Healthvital10 extends StatefulWidget {
+  Healthvital100 createState() => Healthvital100();
 }
 
 class Healthvital100 extends State<Healthvital10> {
-
   final _controller = TextEditingController();
   String textValue = "";
 
   String checkVitalsStatus(String vitalsState) {
-
     // Strings for values
-    String underValue = "You are under the normal range please follow the home remedies given below";
+    String underValue =
+        "You are under the normal range please follow the home remedies given below";
     String normalValue = "You are in the normal range";
     String overValue = "You are over the normal range";
 
     try {
       int vitalsStateNum = int.parse(vitalsState);
 
-      if (vitalsStateNum < 13) return underValue;
-      else if (13 < vitalsStateNum && vitalsStateNum < 35) return normalValue;
-      else return overValue;
+      if (vitalsStateNum < 13)
+        return underValue;
+      else if (13 < vitalsStateNum && vitalsStateNum < 35)
+        return normalValue;
+      else
+        return overValue;
     } catch (exception) {
-       return "An exception was returned";
+      return "An exception was returned";
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
         title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -56,7 +54,7 @@ class Healthvital100 extends State<Healthvital10> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthifier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -91,10 +89,10 @@ class Healthvital100 extends State<Healthvital10> {
               "Hemoglobin",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -102,17 +100,16 @@ class Healthvital100 extends State<Healthvital10> {
             ),
 
             Container(
-              child: Text("Haemoglobin is a type of protein found in the body that is responsible for the production of red blood cells and transports oxygen to other organs ",
-                style: GoogleFonts.openSans(
-                    textStyle: TextStyle(
-                      color: Color(0xff1d3557),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                child: Text(
+                  "Haemoglobin is a type of protein found in the body that is responsible for the production of red blood cells and transports oxygen to other organs ",
+                  style: GoogleFonts.openSans(
+                      textStyle: TextStyle(
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
+                ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
@@ -124,13 +121,10 @@ class Healthvital100 extends State<Healthvital10> {
                   border: OutlineInputBorder(),
                   hintText: 'Enter the hemoglobin value in g/dL',
                 ),
-
                 controller: _controller,
-
                 keyboardType: TextInputType.number,
               ),
               padding: EdgeInsets.all(20),
-
             ),
 
             ElevatedButton(
@@ -142,15 +136,15 @@ class Healthvital100 extends State<Healthvital10> {
                   textValue = checkVitalsStatus(_controller.text);
                 });
               },
-                child: Text(
-                  "submit",
-                  style: GoogleFonts.openSans(
-                      textStyle: TextStyle(
-                        color: Color(0xff023e8a),
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      )),
-                ),
+              child: Text(
+                "submit",
+                style: GoogleFonts.openSans(
+                    textStyle: TextStyle(
+                  color: Color(0xff023e8a),
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                )),
+              ),
             ),
 
             SizedBox(
@@ -162,19 +156,19 @@ class Healthvital100 extends State<Healthvital10> {
               textAlign: TextAlign.center,
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff023e8a),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),// text for range
+                color: Color(0xff023e8a),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
+            ), // text for range
 
             SizedBox(
               height: 20,
             ),
 
             Container(
-
-              child: Text('''What should be done if your heomoglobin is low - 
+                child: Text(
+                  '''What should be done if your heomoglobin is low - 
 
         1. Eat Foods Rich in Iron -
         
@@ -209,22 +203,19 @@ class Healthvital100 extends State<Healthvital10> {
      Lentils and legumes are not only excellent plant-based sources of protein, but they boost your iron intake and up your haemoglobin levels with time. Good sources are mung beans, fava beans, kidney beans, chickpeas, and adzuki beans. Try pairing these with brown/black rice and you’ll have meals which are not only filling but ones that help you meet your daily nutritional requirements.
 
      Some of these foods are also rich in zinc and selenium; these trace minerals can influence the haemoglobin production in your body.''',
-                style: GoogleFonts.openSans(
-                    textStyle: TextStyle(
-                      color: Color(0xff1d3557),
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ),
-                margin: EdgeInsets.all(20.0)
-            )
+                  style: GoogleFonts.openSans(
+                      textStyle: TextStyle(
+                    color: Color(0xff1d3557),
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  )),
+                ),
+                margin: EdgeInsets.all(20.0))
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -278,4 +269,3 @@ class Healthvital100 extends State<Healthvital10> {
     throw UnimplementedError();
   }
 }
-

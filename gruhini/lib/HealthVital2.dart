@@ -2,45 +2,42 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital20 extends StatefulWidget{
-  Healthvital200 createState()=> Healthvital200();
+class Healthvital20 extends StatefulWidget {
+  Healthvital200 createState() => Healthvital200();
 }
 
 class Healthvital200 extends State<Healthvital20> {
-
   final _controller = TextEditingController();
   String textValue = "";
 
   String checkSugarStatus(String vitalsState) {
-
     // Strings for values
     String underValue = "You are in the normal sugar range";
-    String normalValue = "You are pre diebetic";
-    String overValue = "You are diebetic ";
+    String normalValue = "You are pre diabetic";
+    String overValue = "You are diabetic ";
 
     try {
       int vitalsStateNum = int.parse(vitalsState);
 
-      if (vitalsStateNum < 140) return underValue;
-      else if (140 < vitalsStateNum && vitalsStateNum < 199) return normalValue;
-      else return overValue;
+      if (vitalsStateNum < 140)
+        return underValue;
+      else if (140 < vitalsStateNum && vitalsStateNum < 199)
+        return normalValue;
+      else
+        return overValue;
     } catch (exception) {
       return "An exception was returned";
     }
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
         title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -56,7 +53,7 @@ class Healthvital200 extends State<Healthvital20> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthifier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -91,10 +88,10 @@ class Healthvital200 extends State<Healthvital20> {
               "Blood Sugar",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -102,17 +99,16 @@ class Healthvital200 extends State<Healthvital20> {
             ),
 
             Container(
-                child: Text("Blood sugar, or glucose, is the main sugar found in your blood. It comes from the food you eat, and is your body's main source of energy. Your blood carries glucose to all of your body's cells to use for energy.",
+                child: Text(
+                  "Blood sugar, or glucose, is the main sugar found in your blood. It comes from the food you eat, and is your body's main source of energy. Your blood carries glucose to all of your body's cells to use for energy.",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
@@ -124,13 +120,10 @@ class Healthvital200 extends State<Healthvital20> {
                   border: OutlineInputBorder(),
                   hintText: 'Enter the blood sugar value in mg/dl',
                 ),
-
                 controller: _controller,
-
                 keyboardType: TextInputType.number,
               ),
               padding: EdgeInsets.all(20),
-
             ),
 
             ElevatedButton(
@@ -146,10 +139,10 @@ class Healthvital200 extends State<Healthvital20> {
                 "submit",
                 style: GoogleFonts.openSans(
                     textStyle: TextStyle(
-                      color: Color(0xff023e8a),
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    )),
+                  color: Color(0xff023e8a),
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                )),
               ),
             ),
 
@@ -162,19 +155,19 @@ class Healthvital200 extends State<Healthvital20> {
               textAlign: TextAlign.center,
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff023e8a),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),// text for range
+                color: Color(0xff023e8a),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
+            ), // text for range
 
             SizedBox(
               height: 20,
             ),
 
             Container(
-
-                child: Text('''If Blood Sugar Level is Low - 
+                child: Text(
+                  '''If Blood Sugar Level is Low - 
 
 Most of the sugar or glucose in your blood comes from carbohydrates. Carbohydrates are the sugars and starches in grains, beans, vegetables, fruit, milk and milk products, honey, and sugar. If you don’t have diabetes and you’re feeling the unpleasant effects of a drop in blood sugar, eat or drink something with carbohydrates. Good choices are a piece of fruit, a few whole wheat crackers, a glass of milk, or a carton of yogurt. 
 
@@ -343,20 +336,17 @@ Blood sugar levels tend to surge in the early morning hours. In most people, ins
 Lack of sleep can have a similar effect to insulin resistance, meaning that a person’s blood sugar level could spike significantly from lack of sleep. ''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-            )
+                margin: EdgeInsets.all(20.0))
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -410,4 +400,3 @@ Lack of sleep can have a similar effect to insulin resistance, meaning that a pe
     throw UnimplementedError();
   }
 }
-

@@ -2,23 +2,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Healthvital50 extends StatefulWidget{
-  Healthvital500 createState()=> Healthvital500();
+class Healthvital50 extends StatefulWidget {
+  Healthvital500 createState() => Healthvital500();
 }
 
 class Healthvital500 extends State<Healthvital50> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xfff8f9fa),
-
       appBar: AppBar(
-        title: Text("Healthyfier"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -34,7 +30,7 @@ class Healthvital500 extends State<Healthvital50> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO Healthyfier",
+                      Text("WELCOME TO HEALTHIFIER APP",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -69,10 +65,10 @@ class Healthvital500 extends State<Healthvital50> {
               "Thyroid",
               style: GoogleFonts.openSans(
                   textStyle: TextStyle(
-                    color: Color(0xff1d3557),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  )),
+                color: Color(0xff1d3557),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              )),
             ),
 
             SizedBox(
@@ -80,20 +76,20 @@ class Healthvital500 extends State<Healthvital50> {
             ),
 
             Container(
-                child: Text("The thyroid is a butterfly-shaped gland that sits low on the front of the neck. Your thyroid lies below your Adam’s apple, along the front of the windpipe. The thyroid has two side lobes, connected by a bridge (isthmus) in the middle. ",
+                child: Text(
+                  "The thyroid is a butterfly-shaped gland that sits low on the front of the neck. Your thyroid lies below your Adam’s apple, along the front of the windpipe. The thyroid has two side lobes, connected by a bridge (isthmus) in the middle. ",
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             Container(
-                child: Text('''Hypothyroidism signs and symptoms may include: 
+                child: Text(
+                  '''Hypothyroidism signs and symptoms may include: 
 
    • Fatigue
 
@@ -130,22 +126,20 @@ class Healthvital500 extends State<Healthvital50> {
    • Enlarged thyroid gland (goiter)''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-
-            ),
+                margin: EdgeInsets.all(20.0)),
 
             SizedBox(
               height: 20,
             ),
 
             Container(
-
-                child: Text('''Treatments -
+                child: Text(
+                  '''Treatments -
 
 If you have high levels of thyroid hormones (hyperthyroidism), treatment options can include:
 
@@ -178,20 +172,17 @@ To do the thyroid self-exam, follow these steps:
 Repeat this test a few times to get a good look at your thyroid. If you see any lumps or bumps, reach out to your healthcare provider.''',
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
-                        color: Color(0xff1d3557),
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    color: Color(0xff1d3557),
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  )),
                 ),
-                margin: EdgeInsets.all(20.0)
-            )
+                margin: EdgeInsets.all(20.0))
 
             // text for remedy
-
           ],
         ),
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -245,4 +236,3 @@ Repeat this test a few times to get a good look at your thyroid. If you see any 
     throw UnimplementedError();
   }
 }
-
