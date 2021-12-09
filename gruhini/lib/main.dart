@@ -4,6 +4,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/flex.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'AboutApp.dart';
 import 'VaccinationDashboard.dart';
 
@@ -23,8 +25,8 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(
         Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SecondScreen())));
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => IntermediateScreen())));
   }
 
   @override
@@ -32,6 +34,85 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       color: Color(0xfff0f4ff),
       child: Image.asset('assets/images/homednobg.png'),
+    );
+  }
+}
+
+class IntermediateScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color(0xfff8f9fa),
+        body: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 50,
+            ),
+            Text(
+              "Welcome to the Healthifier App",
+              style: TextStyle(
+                color: Colors.green[300],
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Text(
+              "This is an app made by the students of MITSOE currently in their TY as their project for Mini Project 3 of Semester 5",
+              style: TextStyle(
+                color: Color(0xff023e8a),
+                fontSize: 27,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Text(
+              "Idea :- Prof. Rajesh Prasad\n\nGuide :- Prof. Jyoti Gavhane",
+              style: TextStyle(
+                color: Color(0xff023e8a),
+                fontSize: 27,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            RaisedButton(
+                child: Text(
+                  "Click to proceed",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.green,
+                onPressed: () async {
+                  bool alreadyVisited = await getVisitedFlag();
+
+                  if (alreadyVisited) {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SecondScreen()));
+                  } else {
+                    setVisitedFlag();
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => LogInScreen()));
+                  }
+                })
+          ],
+        ));
+  }
+}
+
+class LogInScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xfff8f9fa),
+      appBar: AppBar(
+        title: Text("First Time Login"),
+      ),
     );
   }
 }
@@ -58,8 +139,8 @@ class SecondScreen extends StatelessWidget {
               children: <Widget>[
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("WELCOME TO Healthifier APP",
+                  children: const <Widget>[
+                    Text("WELCOME TO HEALTHIFIER APP",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 20,
@@ -256,4 +337,15 @@ class SecondScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+setVisitedFlag() async {
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+  preferences.setBool("alreadyVisited", true);
+}
+
+getVisitedFlag() async {
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+  bool alreadyVisited = preferences.getBool("alreadyVisited") ?? false;
+  return alreadyVisited;
 }
