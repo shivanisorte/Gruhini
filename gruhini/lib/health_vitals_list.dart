@@ -1,7 +1,9 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gruhini/HealthVital2.dart';
 import 'package:gruhini/Healthvital1.dart';
+import 'package:gruhini/Healthvital3.dart';
 import 'ComingSoonScreen.dart';
 
 class Health_vitals_list extends StatelessWidget {
@@ -12,7 +14,7 @@ class Health_vitals_list extends StatelessWidget {
       backgroundColor: Color(0xfff8f9fa),
 
       appBar: AppBar(
-        title: Text("HoMed"),
+        title: Text("Healthyfier"),
         backgroundColor: Color(0xff42a5f5),
       ),
 
@@ -31,7 +33,7 @@ class Health_vitals_list extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("WELCOME TO HoMed APP",
+                      Text("WELCOME TO Healthyfier",
                           style: TextStyle(
                               color: Color(0xff023e8a),
                               fontSize: 20,
@@ -106,7 +108,7 @@ class Health_vitals_list extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CommingSoonScreen()),
+                        builder: (context) => Healthvital20()),
                   );
                 },
                 child: Column(
@@ -141,7 +143,7 @@ class Health_vitals_list extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CommingSoonScreen()),
+                        builder: (context) => Healthvital30()),
                   );
                 },
                 child: Column(
