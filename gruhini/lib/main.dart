@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xfff0f4ff),
-      child: Image.asset('assets/images/gruhininobg.png'),
+      child: Image.asset('assets/images/homednobg.png'),
     );
   }
 }
@@ -45,10 +45,8 @@ class SecondScreen extends StatelessWidget {
         title: Text("HoMed"),
         backgroundColor: Color(0xff42a5f5),
       ),
-
       body: Column(
         children: <Widget>[
-
           SizedBox(
             height: 40,
           ),
@@ -61,23 +59,19 @@ class SecondScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-
                     Text("WELCOME TO HoMed APP",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 20,
                             fontWeight: FontWeight.bold)),
-
                     SizedBox(
                       height: 8,
                     ),
-
                     Text("Dashboard",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 18,
                             fontWeight: FontWeight.bold)),
-
                   ],
                 ),
                 IconButton(
@@ -114,17 +108,14 @@ class SecondScreen extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
-
                   Image.asset(
                     "assets/images/health.png",
                     width: 90,
                     height: 90,
                   ),
-
                   SizedBox(
                     height: 4,
                   ),
-
                   Text(
                     "Health",
                     style: GoogleFonts.openSans(
@@ -134,11 +125,9 @@ class SecondScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
-
                   SizedBox(
                     height: 5,
                   ),
-
                   Text(
                     "Health Vitals Status Reporting, Timely Medication Reminder and Vaccination Service",
                     textAlign: TextAlign.center,
@@ -180,17 +169,14 @@ class SecondScreen extends StatelessWidget {
                   SizedBox(
                     height: 2,
                   ),
-
                   Image.asset(
                     "assets/images/about.png",
                     width: 90,
                     height: 90,
                   ),
-
                   SizedBox(
                     height: 4,
                   ),
-
                   Text(
                     "About App",
                     style: GoogleFonts.openSans(
@@ -200,11 +186,9 @@ class SecondScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
-
                   SizedBox(
                     height: 5,
                   ),
-
                   Text(
                     "More information about the developers and their purpose",
                     textAlign: TextAlign.center,
@@ -215,7 +199,6 @@ class SecondScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     )),
                   ),
-
                   SizedBox(
                     height: 2,
                   ),
@@ -227,7 +210,6 @@ class SecondScreen extends StatelessWidget {
           ), //container3
         ],
       ),
-
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
