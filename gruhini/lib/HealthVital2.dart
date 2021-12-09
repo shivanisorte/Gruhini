@@ -135,7 +135,7 @@ class Healthvital200 extends State<Healthvital20> {
 
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Color(0xffe63946),
+                primary: Color(0xffcaf0f8),
               ),
               onPressed: () {
                 setState(() {
