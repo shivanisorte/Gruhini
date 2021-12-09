@@ -42,7 +42,7 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xfff8f9fa),
       appBar: AppBar(
-        title: Text("HoMed"),
+        title: Text("Healthifier"),
         backgroundColor: Color(0xff42a5f5),
       ),
       body: Column(
@@ -59,7 +59,7 @@ class SecondScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("WELCOME TO HoMed APP",
+                    Text("WELCOME TO Healthifier APP",
                         style: TextStyle(
                             color: Color(0xff023e8a),
                             fontSize: 20,
